@@ -1,188 +1,284 @@
 /*body*/
 body {
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  nav {
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+    box-shadow: 0 1.7px #dedede;
+    z-index: 1;
 
-  .all {
-    width: auto;
-    height: 100vh;
-    background-size: cover;
-    background-attachment: fixed;
-
-    .foto {
+    ul {
       width: 100%;
-      height: 100%;
-      background-image: url("../foto's/pic3 gespiegeld.jpg");
-
-    }
-
-    @media only screen and (max-width: 1024px) {
-
-      .foto {
-        background-image: url("../foto's/geedit.jpg")
-      }
-
-    }
-
-
-    /*nav*/
-    nav {
-
-      width: 100%;
-      height: 4%;
-      position: fixed;
-      background-color: transparent;
-      color: #676964;
-      top: 0;
+      font-family: sans-serif;
+      list-style-type: none;
       display: flex;
-      z-index: 100;
 
-      ul {
-        width: 100%;
-        font-family: sans-serif;
-        list-style-type: none;
+    }
 
-      }
+    li {
+      width: 30%;
+      padding: 0 3.5%;
+      font-size: 13pt;
+      font-weight: 500;
 
-      li {
-        float: left;
-        padding: 0 3.7%;
-        font-size: 13pt;
-        font-weight: 500;
-      }
+
 
       a {
         text-decoration: none;
-      }
-
-      li:hover,
-      li:focus {
-        color: #a5a29f;
+        color: white;
+        transition: 1.5s;
       }
     }
+    a:hover,
+    a:focus {
+      color: yellow;
+      transition: 1.5s;
 
-    /*Home*/
-    .Home {
-      width: 100%;
-      height: 100vh;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      position: absolute;
-      top: 0;
-
-      .banner {
-        float: left;
-        padding-left: 9%;
-        padding-top: 8%;
-      }
-      h1 {
-        color: #95928f;
-        font-family: sans-serif;
-        font-size: 250%;
-        font-weight: 400;
-      }
     }
 
-    //about me
-    .About_me-con {
-      width: 100%;
-      height: 268px;
-      padding: 50px 0;
+  }
+  @media only screen and (max-width: 800px) {
+
+    nav{
+      height: 9%;
       display: flex;
+    }
+    ul{
+      height: 10%;
       align-items: center;
-
-      //abount me input
-      .About-me-input {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: center;
-        align-content: space-around;
-
-        h1 {
-          width: 20%;
-          height: 100%;
-          font-size: 50px;
-          font-weight: 700;
-          margin: 0 5% 10px 15%;
-          display: inline-block;
-        }
-        .who-is-david{
-          width: 45%;
-          height: 100%;
-
-          padding-left: 15%;
-        }
-        p {
-          width: 100%;
-          height: 20%;
-          margin: 1%;
-
-        }
-      }
-    }
-
-
-    .My_work {
-      width: 100%;
-      height: 550px;
-      display: flex;
-      flex-direction: row;
       justify-content: center;
-      flex-wrap: wrap;
-      align-items: center;
-      align-content: space-around;
-      background-color: #101010;
+    }
+    li{
+      width: 20%;
+      height: 20%;
+    }
+    a{
+      font-size: 25px;
+    }
+  }
+
+  .all {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+    .foto {
+      height: 100%;
+      background-image: url("../foto's/pic10.jpeg");
+      background-attachment: fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: flex-end;
+
+      h1 {
+        width: 45%;
+        height: 15%;
+        margin: 25% 15% 0 0;
+        color: white;
+        font-size: 55px;
+        text-shadow: 2px 2px #000000;
+        font-family: 'Old Standard TT', serif;
+      }
     }
 
-    //footer
-    footer {
-      width: 100%;
-      height: 400px;
-      background-color: white;
+    @media only screen and (max-width: 1000px) {
+
+      .foto {
+        background-image: url("../foto's/pic7.jpeg");
+        height: 100vh;
+        background-size: cover;
+        background-position: 100% 1%;
+      }
+      h1{
+        padding: 0 20% 0 0;
+      }
     }
+  }
+  .A_About_me {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #101010;
+    padding: 5% 0 4.3% 0;
 
+    .A_pf {
+      width: 200px;
+      height: 250px;
+      float: left;
+      margin: 1% 0 0  12%;
 
-
-    .contact {
+    }
+    img {
       width: 100%;
-      height: 90%;
+      height: 100%;
+
+    }
+    .A_tekst {
+      width: 40%;
+      padding: 0 5% 5% 0;
+    }
+    h1 {
+      color: white;
+    }
+    .A_Vos {
+      width: 40%;
+      height: 20%;
+      margin: 0 0 0 2%;
+      color: white;
+
+      p {
+        margin: 1% 0 1% 0;
+        width: 300%;
+      }
+    }
+    .A_Master {
+      width: 80%;
+      height: 20%;
+      margin: 5% 0 3% 0;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      flex-wrap: wrap;
-      align-items: center;
-      align-content: space-around;
-      font-family: sans-serif;
+      font-size: 130%;
 
-      .info {
+      h2 {
         width: 20%;
-
-        p {
-          font-size: 80%;
-          color: #595959;
-
-        }
+        color: white;
       }
 
-      .social-m {
-        margin-right: 20%;
+      ul {
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+
+        li {
+          margin: 0 0 0 10%;
+        }
+      }
+    }
+
+  }
+
+
+
+  .W_my_Work {
+    width: 100%;
+    height: 60%;
+    padding: 0 0 2.7% 0;
+    //background-color: white;
+
+
+
+    .W_head {
+      display: flex;
+      font-family: 'Old Standard TT', serif;
+      justify-content: center;
+      font-size: 20px;
+      margin: 4% 0 0 0;
+    }
+      .W_lijst {
+        width: 100%;
+        height: 100%;
 
         ul {
           list-style-type: none;
+          margin: 5% 0 0 0;
           display: flex;
-          padding-left: 0;
+          flex-direction: row;
+          justify-content: space-around;
+          flex-wrap: wrap;
 
-        }
-        li {
+          li {
+            width: 40%;
+            height: 40%;
 
-          a:hover,
-          a:focus {
-            color: gray;
+
+            a {
+
+
+              img {
+                width: 70%;
+                height: 35%;
+                filter: grayscale(100%);
+                border: solid white;
+                border-width: 2px;
+                margin: 2% 0 2% 0;
+              }
+            }
           }
+          li:hover,
+          li:focus {
+            a{
+              img{
+                border: solid black;
+                border-width: 2px;
+                transform: scale(1.15,1.15);
+                filter: grayscale(0%);
+                transition: 3.5s;
+              }
+            }
+          }
+        }
+
+    }
+  }
+
+  //footer
+  footer {
+    width: 100%;
+    height: 400px;
+    background-color: black;
+  }
+
+  .C_contact {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+    font-family: sans-serif;
+    color: white;
+
+    .C_info {
+      width: 20%;
+
+      p {
+        font-size: 80%;
+        color: white;
+
+      }
+    }
+
+    .C_social {
+      width: 15%;
+      margin: 0 15% 3% 0;
+
+      h1 {
+        display: none;
+      }
+      h4 {
+        margin: 0 0 10% 0;
+      }
+      ul {
+
+        list-style-type: none;
+        display: flex;
+        padding: 10% 0 0 0;
+
+        li {
+          margin: 0 10% 0 0;
         }
 
       }

@@ -1,127 +1,192 @@
 /*body*/
 body {
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+  body nav {
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+    box-shadow: 0 1.7px #dedede;
+    z-index: 1; }
+    body nav ul {
+      width: 100%;
+      font-family: sans-serif;
+      list-style-type: none;
+      display: flex; }
+    body nav li {
+      width: 30%;
+      padding: 0 3.5%;
+      font-size: 13pt;
+      font-weight: 500; }
+      body nav li a {
+        text-decoration: none;
+        color: white;
+        transition: 1.5s; }
+    body nav a:hover,
+    body nav a:focus {
+      color: yellow;
+      transition: 1.5s; }
+  @media only screen and (max-width: 800px) {
+    body nav {
+      height: 9%;
+      display: flex; }
+    body ul {
+      height: 10%;
+      align-items: center;
+      justify-content: center; }
+    body li {
+      width: 20%;
+      height: 20%; }
+    body a {
+      font-size: 25px; } }
   body .all {
-    width: auto;
     height: 100vh;
     background-size: cover;
-    background-attachment: fixed;
-    /*nav*/
-    /*Home*/ }
+    background-position: center; }
     body .all .foto {
-      width: 100%;
       height: 100%;
-      background-image: url("../foto's/pic3 gespiegeld.jpg"); }
-    @media only screen and (max-width: 1024px) {
+      background-image: url("../foto's/pic10.jpeg");
+      background-attachment: fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: flex-end; }
+      body .all .foto h1 {
+        width: 45%;
+        height: 15%;
+        margin: 25% 15% 0 0;
+        color: white;
+        font-size: 55px;
+        text-shadow: 2px 2px #000000;
+        font-family: 'Old Standard TT', serif; }
+    @media only screen and (max-width: 1000px) {
       body .all .foto {
-        background-image: url("../foto's/geedit.jpg"); } }
-    body .all nav {
+        background-image: url("../foto's/pic7.jpeg");
+        height: 100vh;
+        background-size: cover;
+        background-position: 100% 1%; }
+      body .all h1 {
+        padding: 0 20% 0 0; } }
+  body .A_About_me {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #101010;
+    padding: 5% 0 4.3% 0; }
+    body .A_About_me .A_pf {
+      width: 200px;
+      height: 250px;
+      float: left;
+      margin: 1% 0 0  12%; }
+    body .A_About_me img {
       width: 100%;
-      height: 4%;
-      position: fixed;
-      background-color: transparent;
-      color: #676964;
-      top: 0;
-      display: flex;
-      z-index: 100; }
-      body .all nav ul {
-        width: 100%;
-        font-family: sans-serif;
-        list-style-type: none; }
-      body .all nav li {
-        float: left;
-        padding: 0 3.7%;
-        font-size: 13pt;
-        font-weight: 500; }
-      body .all nav a {
-        text-decoration: none; }
-      body .all nav li:hover,
-      body .all nav li:focus {
-        color: #a5a29f; }
-    body .all .Home {
-      width: 100%;
-      height: 100vh;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      position: absolute;
-      top: 0; }
-      body .all .Home .banner {
-        float: left;
-        padding-left: 9%;
-        padding-top: 8%; }
-      body .all .Home h1 {
-        color: #95928f;
-        font-family: sans-serif;
-        font-size: 250%;
-        font-weight: 400; }
-    body .all .About_me-con {
-      width: 100%;
-      height: 268px;
-      padding: 50px 0;
-      display: flex;
-      align-items: center; }
-      body .all .About_me-con .About-me-input {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: center;
-        align-content: space-around; }
-        body .all .About_me-con .About-me-input h1 {
-          width: 20%;
-          height: 100%;
-          font-size: 50px;
-          font-weight: 700;
-          margin: 0 5% 10px 15%;
-          display: inline-block; }
-        body .all .About_me-con .About-me-input .who-is-david {
-          width: 45%;
-          height: 100%;
-          padding-left: 15%; }
-        body .all .About_me-con .About-me-input p {
-          width: 100%;
-          height: 20%;
-          margin: 1%; }
-    body .all .My_work {
-      width: 100%;
-      height: 550px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
-      align-items: center;
-      align-content: space-around;
-      background-color: #101010; }
-    body .all footer {
-      width: 100%;
-      height: 400px;
-      background-color: white; }
-    body .all .contact {
-      width: 100%;
-      height: 90%;
+      height: 100%; }
+    body .A_About_me .A_tekst {
+      width: 40%;
+      padding: 0 5% 5% 0; }
+    body .A_About_me h1 {
+      color: white; }
+    body .A_About_me .A_Vos {
+      width: 40%;
+      height: 20%;
+      margin: 0 0 0 2%;
+      color: white; }
+      body .A_About_me .A_Vos p {
+        margin: 1% 0 1% 0;
+        width: 300%; }
+    body .A_About_me .A_Master {
+      width: 80%;
+      height: 20%;
+      margin: 5% 0 3% 0;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      flex-wrap: wrap;
-      align-items: center;
-      align-content: space-around;
-      font-family: sans-serif; }
-      body .all .contact .info {
-        width: 20%; }
-        body .all .contact .info p {
-          font-size: 80%;
-          color: #595959; }
-      body .all .contact .social-m {
-        margin-right: 20%; }
-        body .all .contact .social-m ul {
-          list-style-type: none;
-          display: flex;
-          padding-left: 0; }
-        body .all .contact .social-m li a:hover,
-        body .all .contact .social-m li a:focus {
-          color: gray; }
+      font-size: 130%; }
+      body .A_About_me .A_Master h2 {
+        width: 20%;
+        color: white; }
+      body .A_About_me .A_Master ul {
+        width: 100%;
+        list-style-type: none;
+        display: flex; }
+        body .A_About_me .A_Master ul li {
+          margin: 0 0 0 10%; }
+  body .W_my_Work {
+    width: 100%;
+    height: 60%;
+    padding: 0 0 2.7% 0; }
+    body .W_my_Work .W_head {
+      display: flex;
+      font-family: 'Old Standard TT', serif;
+      justify-content: center;
+      font-size: 20px;
+      margin: 4% 0 0 0; }
+    body .W_my_Work .W_lijst {
+      width: 100%;
+      height: 100%; }
+      body .W_my_Work .W_lijst ul {
+        list-style-type: none;
+        margin: 5% 0 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap; }
+        body .W_my_Work .W_lijst ul li {
+          width: 40%;
+          height: 40%; }
+          body .W_my_Work .W_lijst ul li a img {
+            width: 70%;
+            height: 35%;
+            filter: grayscale(100%);
+            border: solid white;
+            border-width: 2px;
+            margin: 2% 0 2% 0; }
+        body .W_my_Work .W_lijst ul li:hover a img,
+        body .W_my_Work .W_lijst ul li:focus a img {
+          border: solid black;
+          border-width: 2px;
+          transform: scale(1.15, 1.15);
+          filter: grayscale(0%);
+          transition: 3.5s; }
+  body footer {
+    width: 100%;
+    height: 400px;
+    background-color: black; }
+  body .C_contact {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+    font-family: sans-serif;
+    color: white; }
+    body .C_contact .C_info {
+      width: 20%; }
+      body .C_contact .C_info p {
+        font-size: 80%;
+        color: white; }
+    body .C_contact .C_social {
+      width: 15%;
+      margin: 0 15% 3% 0; }
+      body .C_contact .C_social h1 {
+        display: none; }
+      body .C_contact .C_social h4 {
+        margin: 0 0 10% 0; }
+      body .C_contact .C_social ul {
+        list-style-type: none;
+        display: flex;
+        padding: 10% 0 0 0; }
+        body .C_contact .C_social ul li {
+          margin: 0 10% 0 0; }
 
 /*# sourceMappingURL=styles.css.map */
